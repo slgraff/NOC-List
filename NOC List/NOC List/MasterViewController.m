@@ -91,6 +91,7 @@
 
 #pragma mark - Segues
 
+// Called when executing segue on our View Controller
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     //
@@ -98,7 +99,7 @@
     //
     
     // AgentDetail is my segue identifier
-    if ([[segue identifier] isEqualToString:@"AgentDetail"])
+    if ([[segue identifier] isEqualToString:@"loadAnAgent"])
     {
         //
         // 9. We need to get an NSIndexPath for the selected cell
@@ -120,7 +121,7 @@
         //
         
         DetailViewController *myDetailView = [segue destinationViewController];
-        myDetailView.agent = selectedAgent;
+        [myDetailView setAgent:selectedAgent];
         
     }
 }

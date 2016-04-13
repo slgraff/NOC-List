@@ -39,7 +39,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="2IG-yP-RrT" kind="show" id="OrV-KH-T5p"/>
+                                    <segue destination="2IG-yP-RrT" kind="show" identifier="loadAnAgent" id="OrV-KH-T5p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
