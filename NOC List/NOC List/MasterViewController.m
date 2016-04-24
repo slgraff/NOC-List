@@ -99,7 +99,7 @@
     //
     
     // AgentDetail is my segue identifier
-    if ([[segue identifier] isEqualToString:@"loadAnAgent"])
+    if ([[segue identifier] isEqualToString:@"agentDetailSegue"])
     {
         //
         // 9. We need to get an NSIndexPath for the selected cell
@@ -133,6 +133,7 @@
     return 1;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //
@@ -141,6 +142,7 @@
     
     return [self.agents count];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

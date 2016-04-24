@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master View Controller-->
@@ -39,7 +40,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="2IG-yP-RrT" kind="show" identifier="loadAnAgent" id="OrV-KH-T5p"/>
+                                    <segue destination="2IG-yP-RrT" kind="show" identifier="agentDetailSegue" id="OrV-KH-T5p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,19 +68,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Real Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="An2-q1-pdI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="An2-q1-pdI">
                                 <rect key="frame" x="20" y="101" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-hz-RLD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-hz-RLD">
                                 <rect key="frame" x="273" y="289" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cover Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akR-W9-dz7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akR-W9-dz7">
                                 <rect key="frame" x="20" y="72" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,6 +88,16 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="akR-W9-dz7" firstAttribute="leading" secondItem="68h-81-nIY" secondAttribute="leadingMargin" id="Do4-Kw-OtJ"/>
+                            <constraint firstItem="akR-W9-dz7" firstAttribute="top" secondItem="nM0-Ew-RWI" secondAttribute="bottom" constant="8" symbolic="YES" id="E5r-2Q-ed5"/>
+                            <constraint firstItem="An2-q1-pdI" firstAttribute="top" secondItem="akR-W9-dz7" secondAttribute="bottom" constant="8" symbolic="YES" id="N5g-Cm-ncf"/>
+                            <constraint firstItem="An2-q1-pdI" firstAttribute="centerX" secondItem="dMi-hz-RLD" secondAttribute="centerX" id="NYF-1G-f34"/>
+                            <constraint firstItem="akR-W9-dz7" firstAttribute="trailing" secondItem="68h-81-nIY" secondAttribute="trailingMargin" id="RkG-32-kbx"/>
+                            <constraint firstItem="akR-W9-dz7" firstAttribute="leading" secondItem="An2-q1-pdI" secondAttribute="leading" id="bCr-tv-zlV"/>
+                            <constraint firstItem="akR-W9-dz7" firstAttribute="trailing" secondItem="An2-q1-pdI" secondAttribute="trailing" id="gva-Q7-gph"/>
+                            <constraint firstItem="dMi-hz-RLD" firstAttribute="centerY" secondItem="68h-81-nIY" secondAttribute="centerY" id="gzG-Zr-esU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="coverNameLabel" destination="akR-W9-dz7" id="VoJ-hB-ZD9"/>

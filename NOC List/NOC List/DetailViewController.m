@@ -36,9 +36,9 @@
 
 - (void)setAgent:(Agent *)newAgent
 {
-    if (_agent != newAgent)
+    if (_agent != newAgent) // _agent is equivalent to self.agent in this situation
     {
-        _agent = newAgent;
+        _agent = newAgent;  // Don't use self.agent here instead of _agent, will cause infinite loop
             
         // Update the view.
         [self configureView];

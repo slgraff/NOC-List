@@ -10,8 +10,7 @@
 
 @implementation Agent
 
-+ (Agent *)agentWithDictionary:(NSDictionary *)agentDict
-{
++ (Agent *)agentWithDictionary:(NSDictionary *)agentDict {
     Agent *anAgent = nil;
     if (agentDict)
     {
